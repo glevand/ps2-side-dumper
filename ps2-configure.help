@@ -1,0 +1,38 @@
+# Maintained by Axel Boldt (boldt@math.ucsb.edu)
+#
+# This version of the Linux kernel configuration help texts
+# corresponds to the kernel versions 2.2.x.
+#
+# All this was shamelessly stolen from several different sources. Many
+# thanks to all the contributors. Feel free to use these help texts in
+# your own kernel configuration tools. The texts are copyrighted (c)
+# 1995-1999 by Axel Boldt and many others and are governed by the GNU
+# General Public License.
+
+PlayStation2 USB controller support
+CONFIG_USB_PS2_OHCI
+  Support for the PlayStation2 OHCI USB controller.  Say Y here if 
+  you want to use the PS2-linux keyboard any other USB devices.  
+  If unsure, say Y. 
+
+  This code is also available as a module ( = code which can be
+  inserted in and removed from the running kernel whenever you want).
+  The module will be called ps2-ohci.o. If you want to compile it
+  as a module, say M here and read Documentation/modules.txt.
+
+USB packet dumper (SideDumper)
+CONFIG_USB_SIDE_DUMPER
+  Say Y here to build a general purpose USB packet dumper into the  USB
+  controller driver.  Dumper settings can be set on a per device basis,
+  making it useful for investigating a single USB device.  If building
+  the driver as a module, the module will be called ps2-ohci.o,
+  usb-ohci-dumper.o, or usb-uhci-dumper.o, depending on which USB
+  controller is configured.  See the file 
+  Documentation/usb/side_dumper.txt for more details. 
+  If unsure, say N.
+
+USB verbose debug messages
+CONFIG_USB_DEBUG
+  Say Y here if you want the USB core & hub drivers to produce a bunch
+  of debug messages to the system log. Select this if you are having a
+  problem with USB support and want to see more of what is going on.
